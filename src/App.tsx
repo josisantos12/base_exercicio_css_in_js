@@ -1,19 +1,17 @@
-import Header from './components/Cabecalho'
-import Hero from './components/Hero'
-import ListaVagas from './containers/ListaVagas'
+import Cabecalho from './Cabecalho.tsx'
+import FormVagas from './FormVagas.tsx'
+import Hero from './Hero.tsx'
+import Vaga from './Vaga.tsx'
+import ListaVagas from './ListaVagas'
 
-import './global.css'
-
-function App() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <div className="container">
+function App() {    
+    return (
+        <div className="App">
+        <Cabecalho />
+        <Hero />
+        <FormVagas />
         <ListaVagas />
-      </div>
-    </>
-  )
+        </div>
+    )
 }
-
-export default App
+export default App;
