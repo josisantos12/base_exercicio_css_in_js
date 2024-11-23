@@ -1,5 +1,5 @@
-import { FormEvent, useState } from 'react';
-import styled from 'styled-components';
+import { FormEvent, useState } from "react"
+import styled from "styled-components"
 
 const StyledForm = styled.form`
   display: grid;
@@ -8,7 +8,7 @@ const StyledForm = styled.form`
   padding: 32px;
   border-radius: 12px;
   margin-top: 40px;
-`;
+`
 
 const BtnPesquisar = styled.button`
   background-color: var(--cor-principal);
@@ -19,24 +19,24 @@ const BtnPesquisar = styled.button`
   color: var(--cor-secundaria);
   margin-left: 8px;
   cursor: pointer;
-`;
+`
 
 const Campo = styled.input`
   padding: 0 16px;
   outline-color: var(--cor-principal);
-`;
+`
 
 type Props = {
-  aoPesquisar: (termo: string) => void;
-};
+  aoPesquisar: (termo: string) => void
+}
 
 const FormVagas = ({ aoPesquisar }: Props) => {
-  const [termo, setTermo] = useState<string>('');
+  const [termo, setTermo] = useState<string>("")
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    aoPesquisar(termo.toLocaleLowerCase());
-  };
+    e.preventDefault()
+    aoPesquisar(termo.toLocaleLowerCase())
+  }
 
   return (
     <StyledForm onSubmit={aoEnviarForm}>
@@ -47,7 +47,7 @@ const FormVagas = ({ aoPesquisar }: Props) => {
       />
       <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
     </StyledForm>
-  );
-};
+  )
+}
 
-export default FormVagas;
+export default FormVagas
