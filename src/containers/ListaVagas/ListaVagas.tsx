@@ -4,12 +4,13 @@ import FormVagas from "../../components/FormVagas/FormVagas"
 import Vaga from "../../components/Vaga/Vaga"
 
 const VagasContainer = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 16px;
-  row-gap: 16px;
-  margin-top: 32px;
-
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 80%;
+  margin: auto;
+}
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }

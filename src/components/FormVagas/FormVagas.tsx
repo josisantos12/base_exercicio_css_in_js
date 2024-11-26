@@ -8,6 +8,8 @@ const StyledForm = styled.form`
   padding: 32px;
   border-radius: 12px;
   margin-top: 40px;
+  width: 76%;
+  margin-left: 12%;
 `
 
 const BtnPesquisar = styled.button`
